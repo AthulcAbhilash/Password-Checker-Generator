@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Password Checker & Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1>Password Checker & Generator</h1>
+        </div>
+
+        <div class="section">
+            <h2>Check Your Password</h2>
+
+            <input type="text" id="userPassword" placeholder="Enter your password">
+
+            <button onclick="checkUserPassword()">Check Password</button>
+
+            <div id="strength"></div>
+
+            <button class="improve-btn" onclick="improvePassword()">
+                Improve Password
+            </button>
+        </div>
+
+        <hr>
+
+        <div class="section">
+
+            <h2>Generate Password</h2>
+
+            <div class="input-box">
+                <input type="text" id="password" placeholder="Generated password..." readonly>
+                <button onclick="copyPassword()">Copy</button>
+            </div>
+
+            <label>
+                Password Length: <span id="lengthValue">8</span>
+            </label>
+
+            <input type="range" id="length" min="4" max="20" value="8">
+
+            <div class="options">
+                <label><input type="checkbox" id="uppercase" checked> Uppercase</label>
+                <label><input type="checkbox" id="lowercase" checked> Lowercase</label>
+                <label><input type="checkbox" id="numbers" checked> Numbers</label>
+                <label><input type="checkbox" id="symbols"> Symbols</label>
+            </div>
+
+            <button class="generate-btn" onclick="generatePassword()">
+                Generate Password
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
